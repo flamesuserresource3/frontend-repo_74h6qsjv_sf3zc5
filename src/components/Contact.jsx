@@ -2,76 +2,80 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="contatti" className="bg-white py-20">
-      <div className="mx-auto max-w-5xl px-6">
+    <section id="contatti" className="relative bg-gradient-to-b from-white to-emerald-50/40 py-24">
+      <div className="pointer-events-none absolute inset-0" aria-hidden>
+        <div className="absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-emerald-300/20 blur-3xl" />
+      </div>
+
+      <div className="relative mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-emerald-950 sm:text-4xl">
             Contatti e prenotazioni
           </h2>
-          <p className="mt-3 text-lg text-gray-600">
+          <p className="mt-3 text-lg text-emerald-900/80">
             Scrivimi per informazioni o per prenotare una consulenza in studio o online.
           </p>
         </div>
 
         <div className="mt-12 grid gap-8 md:grid-cols-3">
-          <div className="rounded-2xl border border-gray-100 p-6 shadow-sm">
-            <div className="flex items-center gap-3 text-emerald-700">
+          <div className="rounded-2xl border border-white/40 bg-white/70 p-6 shadow-lg shadow-emerald-900/5 backdrop-blur">
+            <div className="flex items-center gap-3 text-emerald-900">
               <Phone className="h-5 w-5" />
               <h3 className="font-semibold">Telefono</h3>
             </div>
-            <p className="mt-2 text-gray-700">+39 000 000 000</p>
+            <p className="mt-2 text-emerald-900/85">+39 000 000 000</p>
           </div>
-          <div className="rounded-2xl border border-gray-100 p-6 shadow-sm">
-            <div className="flex items-center gap-3 text-emerald-700">
+          <div className="rounded-2xl border border-white/40 bg-white/70 p-6 shadow-lg shadow-emerald-900/5 backdrop-blur">
+            <div className="flex items-center gap-3 text-emerald-900">
               <Mail className="h-5 w-5" />
               <h3 className="font-semibold">Email</h3>
             </div>
-            <p className="mt-2 text-gray-700">info@francescaferrone.it</p>
+            <p className="mt-2 text-emerald-900/85">info@francescaferrone.it</p>
           </div>
-          <div className="rounded-2xl border border-gray-100 p-6 shadow-sm">
-            <div className="flex items-center gap-3 text-emerald-700">
+          <div className="rounded-2xl border border-white/40 bg-white/70 p-6 shadow-lg shadow-emerald-900/5 backdrop-blur">
+            <div className="flex items-center gap-3 text-emerald-900">
               <MapPin className="h-5 w-5" />
               <h3 className="font-semibold">Studio</h3>
             </div>
-            <p className="mt-2 text-gray-700">Ricevo su appuntamento</p>
+            <p className="mt-2 text-emerald-900/85">Ricevo su appuntamento</p>
           </div>
         </div>
 
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="mt-12 grid gap-6 rounded-2xl border border-gray-100 bg-emerald-50/50 p-6 shadow-sm md:grid-cols-2"
+          className="mt-12 grid gap-6 rounded-2xl border border-white/40 bg-white/70 p-6 shadow-lg shadow-emerald-900/5 backdrop-blur md:grid-cols-2"
         >
           <div>
-            <label className="block text-sm font-medium text-gray-700">Nome e cognome</label>
+            <label className="block text-sm font-medium text-emerald-900">Nome e cognome</label>
             <input
               type="text"
               required
-              className="mt-1 w-full rounded-lg border-gray-300 focus:border-emerald-500 focus:ring-emerald-500"
+              className="mt-1 w-full rounded-xl border-emerald-900/20 bg-white/80 text-emerald-950 placeholder:text-emerald-900/40 focus:border-emerald-600 focus:ring-emerald-600"
               placeholder="Mario Rossi"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Email</label>
+            <label className="block text-sm font-medium text-emerald-900">Email</label>
             <input
               type="email"
               required
-              className="mt-1 w-full rounded-lg border-gray-300 focus:border-emerald-500 focus:ring-emerald-500"
+              className="mt-1 w-full rounded-xl border-emerald-900/20 bg-white/80 text-emerald-950 placeholder:text-emerald-900/40 focus:border-emerald-600 focus:ring-emerald-600"
               placeholder="mario@email.it"
             />
           </div>
           <div className="md:col-span-2">
-            <label className="block text-sm font-medium text-gray-700">Messaggio</label>
+            <label className="block text-sm font-medium text-emerald-900">Messaggio</label>
             <textarea
               rows={4}
               required
-              className="mt-1 w-full rounded-lg border-gray-300 focus:border-emerald-500 focus:ring-emerald-500"
+              className="mt-1 w-full rounded-xl border-emerald-900/20 bg-white/80 text-emerald-950 placeholder:text-emerald-900/40 focus:border-emerald-600 focus:ring-emerald-600"
               placeholder="Raccontami i tuoi obiettivi..."
             />
           </div>
           <div className="md:col-span-2">
             <button
               type="submit"
-              className="w-full rounded-lg bg-emerald-600 px-5 py-3 font-medium text-white shadow hover:bg-emerald-700"
+              className="w-full rounded-xl bg-gradient-to-r from-emerald-900 to-emerald-700 px-6 py-3 font-medium text-white shadow-lg shadow-emerald-900/20 ring-1 ring-white/10 hover:from-emerald-800 hover:to-emerald-700"
             >
               Invia richiesta
             </button>
